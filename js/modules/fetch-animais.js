@@ -24,7 +24,7 @@ export default function fetchAnimais(url, target) {
 
     async function criarAnimais() {
         try{
-            const animaisResponse = await fetch(url);
+            const animaisResponse = await fetch('./animaisapi.json');
             const animaisJSON = await animaisResponse.json();
 
             animaisJSON.forEach(animal => preencherAnimais(animal));
